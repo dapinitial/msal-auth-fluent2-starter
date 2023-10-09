@@ -1,0 +1,44 @@
+{
+  "name": "dsts-modern-auth-poc",
+  "version": "0.1.0",
+  "description": "Minimal Webpack, React 18, React Router 6, TypeScript, SCSS, Fluent 9 prototyping boilerplate(sin create-react-app).",
+  "main": "index.tsx",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "webpack serve --port 3000",
+    "build": "webpack",
+    "start": "npm-run-all clean --parallel watch:build watch:server --print-label",
+    "watch:build": "tsc --watch",
+    "watch:server": "nodemon './dist/index.js' --watch './dist'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/msal-browser": "^3.2.0",
+    "@azure/msal-common": "^14.1.0",
+    "@azure/msal-react": "^2.0.4",
+    "@fluentui/react": "^8.111.2",
+    "@fluentui/react-components": "^9.31.0",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
+    "sass": "^1.66.1"
+  },
+  "devDependencies": {
+    "@types/copy-webpack-plugin": "^10.1.0",
+    "@types/node": "^20.6.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "nodemon": "^3.0.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
